@@ -20,7 +20,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -99,6 +99,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LogonDlg.h" />
+    <ClInclude Include="Manager.h" />
     <ClInclude Include="MFCLiveClient.h" />
     <ClInclude Include="MFCLiveClientDlg.h" />
     <ClInclude Include="Resource.h" />
@@ -106,6 +108,8 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="LogonDlg.cpp" />
+    <ClCompile Include="Manager.cpp" />
     <ClCompile Include="MFCLiveClient.cpp" />
     <ClCompile Include="MFCLiveClientDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -125,4 +129,9 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="MFCLiveClient.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
