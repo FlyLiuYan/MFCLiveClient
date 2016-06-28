@@ -28,4 +28,5 @@ public:
 	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
 
 	
+	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 };

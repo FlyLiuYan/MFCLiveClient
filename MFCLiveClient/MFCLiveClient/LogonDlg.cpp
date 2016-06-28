@@ -32,6 +32,7 @@ BEGIN_MESSAGE_MAP(LogonDlg, CDialogEx)
 	ON_BN_CLICKED(IDCANCEL, &LogonDlg::OnBnClickedCancel)
 	ON_BN_CLICKED(IDCANCEL_MIN, &LogonDlg::OnBnClickedMin)
 	ON_WM_LBUTTONUP()
+	ON_WM_ERASEBKGND()
 END_MESSAGE_MAP()
 
 
@@ -72,4 +73,22 @@ void LogonDlg::OnLButtonUp(UINT nFlags, CPoint point)
 {
 	// TODO:  在此添加消息处理程序代码和/或调用默认值
 	CDialogEx::OnLButtonUp(nFlags, point);
+}
+
+
+BOOL LogonDlg::OnEraseBkgnd(CDC* pDC)
+{
+	// TODO:  在此添加消息处理程序代码和/或调用默认值
+
+	CImage image;
+	image.Load(_T("./res/EraseBKgnd.png"));
+
+	image.Draw(pDC->m_hDC, 0, 0, image.GetWidth(), image.GetHeight());
+
+	//ReleaseDC(pDC);
+
+	return TRUE;
+
+
+//	return CDialogEx::OnEraseBkgnd(pDC);
 }
